@@ -1,4 +1,5 @@
 import axios from 'axios';
+import key from '../key';
 
 function ImageForm({image, setImage, response, setResponse, setStatus}) {
 
@@ -22,7 +23,7 @@ function ImageForm({image, setImage, response, setResponse, setStatus}) {
                     formData,
                     {
                         params: {
-                            api_key: "9zBI3bx7d4qVBh2pX1N1",
+                            api_key: key,
                         },
                         headers: {
                             "Content-Type": "multipart/form-data",
@@ -43,12 +44,6 @@ function ImageForm({image, setImage, response, setResponse, setStatus}) {
         <>
             <input type="file" accept="image/*" onChange={handleImageChange} />
             <button onClick={sendImage}>Send Image</button>
-                {response && (
-                    <div>
-                    <h2>Server Response:</h2>
-                    <pre>{response}</pre>
-                    </div>
-                )}
         </>
     )
 }

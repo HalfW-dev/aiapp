@@ -1,6 +1,7 @@
 function ImageResult({response, status}) {
     return(
-        <>  {status === 'pending' && (
+        <>  
+            {status === 'pending' && (
                 <h2>Working on it...</h2>
             )}
             {response && (
