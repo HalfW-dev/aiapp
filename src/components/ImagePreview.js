@@ -1,7 +1,4 @@
-import { useState } from "react";
-
-function ImagePreview({image}) {
-    const [imageUrl, setImageUrl] = useState('');
+function ImagePreview({image, imageUrl, setImageUrl}) {
 
     const reader = new FileReader();
 
@@ -19,7 +16,7 @@ function ImagePreview({image}) {
                     <h2>Image Preview</h2> 
                     <img src={imageUrl} 
                         alt="Selected" 
-                        style={{ maxWidth: '100%', maxHeight: '300px' }} 
+                        style={{ maxWidth: '100%', maxHeight: '1000px' }} 
                     />
                 </div>
             }

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import key from '../key';
+import key from './key';
 
 function ImageForm({image, setImage, response, setResponse, setStatus}) {
 
